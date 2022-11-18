@@ -1,0 +1,15 @@
+export {default as Categories }from './Categories';
+export {default as Features} from './Features';
+export {default as FeaturesItem} from './FeaturesItem';
+export {default as Footer }from './Footer';
+export {default as Modal} from './Modal';
+export {default as Navbar} from './Navbar';
+export {default as Main} from './Main';
+export {default as PostCard } from './PostCard';
+export {default as PostWidget } from './PostWidget';
+export {default as PricingItem } from './PricingItem';
+export {default as SolutionsItem } from './SolutionsItem';
+export {default as Value} from './Value';
+export {default as ViewList } from './ViewList';
+export {default as FeaturedPostCard } from './FeaturedPostCard';
+export {default as PostDetail } from './PostDetail';
