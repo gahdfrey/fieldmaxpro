@@ -1,9 +1,12 @@
 import React from "react";
 import moment from "moment";
 import Link from "next/link";
+import useGetPosts from '../config/hooks/useGetPosts'
+
 
 const PostCard = ({ post }) => {
-  console.log(post);
+  const {data} = useGetPosts()
+  console.log('data', data)
   return (
     <div className="bg-white shadow-lg rounded-lg p-0 lg:p-8 pb-12 mb-8">
       <div className="relative overflow-hidden shadow-md pb-80 mb-6">

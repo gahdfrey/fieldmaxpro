@@ -1,8 +1,11 @@
 import { PostCard, Categories, PostWidget } from '../components';
 import { getPosts } from '../services';
 import { FeaturedPosts } from '../sections';
+import useGetPosts from '../config/hooks/useGetPosts'
 
 export default function Home({ posts }) {
+  const {data} = useGetPosts()
+  console.log('data', data)
   return (
     // <div className="container px-10 mx-auto mb-8">
   <div className="container px-10 mx-auto py-[120px] lg:grid  lg:grid-cols-[1fr_4fr] lg:gap-12">
