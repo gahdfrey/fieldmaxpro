@@ -8,25 +8,24 @@ export default function Home({ posts }) {
   console.log('data', data)
   return (
     // <div className="container px-10 mx-auto mb-8">
-  <div className="container px-10 mx-auto py-[120px] lg:grid  lg:grid-cols-[1fr_4fr] lg:gap-12">
-    <div className='hidden lg:grid'>
+    <div className="container px-10 mx-auto py-[120px] lg:grid lg:grid-cols-[1fr_5fr] lg:gap-6 min-h-[40vh]">
+    <div className="hidden lg:grid pt-6 overflow-y-scroll h-[80vh]">
       <FeaturedPosts />
+    </div>
+    <div className="grid lg:grid-cols-[3fr_1fr] lg:gap-6 ">
+      <div className="">
+        {posts.map((post, index) => (
+          <PostCard key={index} post={post.node} />
+        ))}
       </div>
-      <div className="grid lg:grid-cols-[2fr_1fr] lg:gap-12 ">
-        <div className="">
-          {/* {posts.map((post) => <PostCard post={post} key={post.title}/>)} */}
-           {posts.map((post, index) => 
-            <PostCard key={index} post={post.node} />
-          )} 
-        </div>
-        <div className="">
-          <div className="relative lg:sticky top-8">
-            <PostWidget />
-            <Categories />
-          </div>
+      <div className="">
+        <div className="relative lg:sticky top-8">
+          <PostWidget />
+          <Categories />
         </div>
       </div>
     </div>
+  </div>
   );
 }
 
