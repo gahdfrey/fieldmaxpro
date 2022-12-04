@@ -3,9 +3,7 @@ import constants from './constants';
 import helpers from './helpers';
 
 const {
-    API: { baseURL, timeout },
-    COOKIES,
-} = constants;
+    API: { baseURL, timeout } } = constants;
 
 const fmp = axios.create({
     baseURL,
