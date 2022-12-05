@@ -15,7 +15,7 @@ const useGetSinglePost = (id) => {
         return response
     }
 
-    const { data } = useSWR([API_ROUTES.getSinglePost, filter], fetcher)
+    const { data } = useSWR([API_ROUTES.getSinglePost, filter, id], fetcher)
 
     return {
         data,

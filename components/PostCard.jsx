@@ -1,23 +1,21 @@
 import React from "react";
 import moment from "moment";
 import Link from "next/link";
-import useGetPosts from '../config/hooks/useGetPosts'
-
+import { useRouter } from "next/router";
 
 const PostCard = ({ post }) => {
-  const {data} = useGetPosts()
-  console.log('data', data)
+  const router = useRouter()
   return (
-    <div className="bg-white shadow-lg rounded-lg p-0 lg:p-8 pb-12 mb-8">
+    <div className="bg-white shadow-lg rounded-lg p-0 lg:p-8 pb-12 mb-8 max-w-xl">
       <div className="relative overflow-hidden shadow-md pb-80 mb-6">
         <img
-          src={post.featuredImage.url}
+          src={post.thumb_banner_url || '/assets/image_unavailable.jpeg'}
           alt={post.title}
           className="object-top absolute h-80 w-full object-cover shadow-lg rounded-t-lg lg:rounded-lg"
         />
       </div>
       <h1 className="transition duration-700 text-center mb-8 cursor-pointer hover:text-pink-600 text-3xl font-semibold">
-        <Link href={`/post/${post.slug}`}>{post.title}</Link>
+        <Link href={`/post/${post.id}`}>{post.title}</Link>
       </h1>
       <div className="block lg:flex text-center items-center justify-center mb-8 w-full">
         <div className="flex items-center justify-center mb-4 lg:mb-0 w-full lg:w-auto mr-8">
@@ -39,7 +37,7 @@ const PostCard = ({ post }) => {
               />
             </svg>
           <p className="inline align-middle text-gray-700 text-lg">
-            {post.author.name}
+            {post.posted_by}
           </p>
         </div>
         <div className="font-medium text-gray-700 flex justify-center items-center">
@@ -66,18 +64,16 @@ const PostCard = ({ post }) => {
                 stroke-linejoin="round"
               />
             </svg>
-          <span>{moment(post.createdAt).format("MMM DD, YYYY")}</span> 
+          <span>{moment(post.createdat).format("MMM DD, YYYY")}</span> 
         </div>
       </div>
       <p className="text-center text-lg text-gray-700 font-normal px-4 mb-8">
-       {post.excerpt} 
+       <div dangerouslySetInnerHTML={{ __html: post.content }}  className="!font-normal max-h-96 whitespace-nowrap overflow-hidden text-ellipsis"/>
       </p>
       <div className="text-center ">
-      <Link href={`/post/${post.slug}`}>
-          <span className="transition duration-500 transform hover:-translate-y-1 inline-block bg-[#ff6047] text-lg font-medium rounded-full text-white px-8 py-3 cursor-pointer">
+          <button onClick={() => router.push(`/post/${post.id}`)}  className="transition duration-500 transform hover:-translate-y-1 inline-block bg-[#ff6047] text-lg font-medium rounded-full text-white px-8 py-3 cursor-pointer">
             Continue Reading
-          </span>
-        </Link>
+          </button>
       </div>
     </div>
   );

@@ -8,7 +8,7 @@ const FeaturedPostCard = ({ post }) => (
     {/* <div className="absolute rounded-lg bg-center bg-no-repeat bg-cover shadow-md inline-block w-full h-full" style={{ backgroundImage: `url('${post.featuredImage.url}')` }} />
     <div className="absolute rounded-lg bg-center bg-gradient-to-b opacity-50 from-gray-400 via-gray-700 to-black w-full h-full" /> */}
     <div className="flex flex-col items-center justify-center absolute w-full">
-      <p className="text-black mb-4 text-shadow font-semibold text-xs">{moment(post.createdAt).format('MMM DD, YYYY')}</p>
+      <p className="text-black mb-4 text-shadow font-semibold text-xs">{moment(post.createdat).format('MMM DD, YYYY')}</p>
       <p className="text-black mb-4 text-shadow font-semibold text-[15px] text-center">{post.title}</p>
       <div className="flex items-center bottom-5 w-full justify-center">
             <svg
@@ -28,10 +28,10 @@ const FeaturedPostCard = ({ post }) => (
                 fill="#FF6047"
               />
             </svg>
-        <p className="inline align-middle text-sm font-medium">{post.author.name}</p>
+        <p className="inline align-middle text-sm font-medium">{post.posted_by}</p>
       </div>
     </div>
-    <Link href={`/post/${post.slug}`}><span className="cursor-pointer absolute w-full h-full" /></Link>
+    <Link href={`/post/${post.id}`}><span className="cursor-pointer absolute w-full h-full" /></Link>
   </div>
 );
 
