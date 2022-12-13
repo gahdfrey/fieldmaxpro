@@ -4,13 +4,13 @@ import moment from 'moment';
 import Link from 'next/link';
 
 const FeaturedPostCard = ({ post }) => (
-    <div className="relative h-[12rem]">
-    {/* <div className="absolute rounded-lg bg-center bg-no-repeat bg-cover shadow-md inline-block w-full h-full" style={{ backgroundImage: `url('${post.featuredImage.url}')` }} />
-    <div className="absolute rounded-lg bg-center bg-gradient-to-b opacity-50 from-gray-400 via-gray-700 to-black w-full h-full" /> */}
-    <div className="flex flex-col items-center justify-center absolute w-full">
-      <p className="text-black mb-4 text-shadow font-semibold text-xs">{moment(post.createdat).format('MMM DD, YYYY')}</p>
-      <p className="text-black mb-4 text-shadow font-semibold text-[15px] text-center">{post.title}</p>
-      <div className="flex items-center bottom-5 w-full justify-center">
+    <div className="relative h-[6.5rem]">
+    {/* <div className="absolute inline-block w-full h-full bg-center bg-no-repeat bg-cover rounded-lg shadow-md" style={{ backgroundImage: `url('${post.featuredImage.url}')` }} />
+    <div className="absolute w-full h-full bg-center rounded-lg opacity-50 bg-gradient-to-b from-gray-400 via-gray-700 to-black" /> */}
+    <div className="absolute flex flex-col items-center justify-center w-full border-b ">
+      <p className="text-black mb-2 text-shadow font-semibold text-[10px]">{moment(post.createdat).format('MMM DD, YYYY')}</p>
+      <p className="text-black mb-2 text-shadow font-semibold text-[11px] text-center px-2">{post.title}</p>
+      {/* <div className="flex items-center justify-center w-full bottom-5">
             <svg
               width="20"
               height="20"
@@ -28,10 +28,10 @@ const FeaturedPostCard = ({ post }) => (
                 fill="#FF6047"
               />
             </svg>
-        <p className="inline align-middle text-sm font-medium">{post.posted_by}</p>
-      </div>
+        <p className="inline text-sm font-medium align-middle">{post.posted_by}</p>
+      </div> */}
     </div>
-    <Link href={`/post/${post.id}`}><span className="cursor-pointer absolute w-full h-full" /></Link>
+    <Link href={`/post/${post.id}`}><span className="absolute w-full h-full cursor-pointer" /></Link>
   </div>
 );
 

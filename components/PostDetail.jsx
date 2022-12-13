@@ -3,17 +3,17 @@ import moment from "moment";
 
 const PostDetail = ({ post }) => {
   return (
-    <div className="bg-white shadow-lg rounded-lg lg:p-8 pb-12 mb-8">
-      <div className="relative over-flow-hidden shadow-md mb-6">
+    <div className="pb-12 mb-8 bg-white rounded-lg shadow-lg lg:p-8">
+      <div className="relative mb-6 shadow-md over-flow-hidden">
         <img
-          src={post.thumb_banner_url}
-          alt={post.title}
-          className="object-top h-full w-full rounded-t-lg"
+          src={post?.thumb_banner_url}
+          alt={post?.title}
+          className="object-top w-full h-full rounded-t-lg"
         />
       </div>
       <div className="px-4 lg:px-0 ">
-        <div className="flex items-center justify-between mb-8 w-full">
-          <div className="flex items-center mb-4 lg:mb-0 w-full lg:w-auto mr-8">
+        <div className="flex items-center justify-between w-full mb-8">
+          <div className="flex items-center w-full mb-4 mr-8 lg:mb-0 lg:w-auto">
             <svg
               width="32"
               height="32"
@@ -32,11 +32,11 @@ const PostDetail = ({ post }) => {
               />
             </svg>
 
-            <p className="inline align-middle text-gray-700 text-lg">
-              {post.posted_by}
+            <p className="inline text-lg text-gray-700 align-middle">
+              {post?.posted_by}
             </p>
           </div>
-          <div className="font-medium text-gray-700 flex justify-center w-full items-center">
+          <div className="flex items-center justify-center w-full font-medium text-gray-700">
             <svg
               width="24"
               height="24"
@@ -60,11 +60,11 @@ const PostDetail = ({ post }) => {
                 stroke-linejoin="round"
               />
             </svg>
-            <span>{moment(post.createdat).format("MMM DD, YYYY")}</span>
+            <span>{moment(post?.createdat).format("MMM DD, YYYY")}</span>
           </div>
         </div>
-        <h1 className="mb-8 text-3xl font-semi-bold">{post.title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: post.content }}  />
+        <h1 className="mb-8 text-3xl font-semi-bold">{post?.title}</h1>
+        <div dangerouslySetInnerHTML={{ __html: post?.content }}  />
       </div>
     </div>
   );

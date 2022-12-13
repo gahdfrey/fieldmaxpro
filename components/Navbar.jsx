@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { AiOutlineClose,  AiOutlineMenu } from "react-icons/ai";
-import { FaLinkedinIn, FaInstagramSquare,} from "react-icons/fa";
+import { FaLinkedinIn, FaInstagramSquare,FaYoutube} from "react-icons/fa";
 import { AiFillFacebook, AiFillTwitterSquare } from "react-icons/ai";
 import { useRouter } from "next/router";
 import NavLogo from "../public/assets/logo.png";
@@ -214,7 +214,9 @@ const Navbar = () => {
               </ul>
               <div>
                 <Link href="/#contact">
-                  <li className="text-sm inline-block uppercase text-white cursor-pointer list-none bg-[#E03E27] p-[15px] rounded-md">
+                  <li className="text-sm inline-block uppercase text-white cursor-pointer list-none bg-[#E03E27] p-[15px] rounded-md"
+                     onClick={() => setShowModal(true)}>
+                    
                     Try for free!
                   </li>
                 </Link>
@@ -225,16 +227,16 @@ const Navbar = () => {
                 </p>
                 <div className="flex items-center justify-between text-[#666666] w-full sm:w-[80%]">
                   <a
-                    href="https://www.linkedin.com/in/clint-briley-50056920a/"
+                   href="https://www.youtube.com/channel/UCiUwB1lHj9awlb0dq4O_Jhg"
                     target="_blank"
                     rel="noreferrer"
                   >
                     <div className="p-3 duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-400 hover:scale-105">
-                    <AiFillTwitterSquare />
+                    <FaYoutube /> 
                     </div>
                   </a>
                   <a
-                    href="https://github.com/fireclint"
+                    href="https://bit.ly/32hCWTR"
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -242,22 +244,26 @@ const Navbar = () => {
                     <AiFillFacebook />
                     </div>
                   </a>
-                  <Link href="/#contact">
-                    <div
-                      onClick={() => setNav(!nav)}
-                      className="p-3 duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-400 hover:scale-105"
-                    >
-                      <FaLinkedinIn /> 
+
+                  <a
+                      href="https://bit.ly/3gfUAjm"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <div className="p-3 duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-400 hover:scale-105">
+                    <FaLinkedinIn /> 
                     </div>
-                  </Link>
-                  <Link href="/resume">
-                    <div
-                      onClick={() => setNav(!nav)}
-                      className="p-3 duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-400 hover:scale-105"
-                    >
-                     <FaInstagramSquare /> 
+                  </a>
+
+                  <a
+                     href="https://instagram.com/fieldmaxpro.ng?igshid=YWJhMjlhZTc="
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <div className="p-3 duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-400 hover:scale-105">
+                    <FaInstagramSquare /> 
                     </div>
-                  </Link>
+                  </a>  
                 </div>
               </div>
             </div>

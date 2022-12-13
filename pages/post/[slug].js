@@ -11,8 +11,8 @@
 
 // const PostDetails = ({ post }) => {
 //   return (
-//     <div className="container mx-auto px-10 mb-8">
-//       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+//     <div className="container px-10 mx-auto mb-8">
+//       <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
 //         <div className="col-span-1 lg:col-span-8">
 //           <PostDetail post={post} />
 //           <Author  author={post.author}/>
@@ -64,14 +64,14 @@ const PostDetails = ({ post }) => {
   return (
 
     <div className="container mx-auto px-10 mb-8 py-[120px]">
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+      <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
         <div className="col-span-1 lg:col-span-8">
           <PostDetail post={data?.data} />
         </div>
         <div className="col-span-1 lg:col-span-4">
           <div className="relative lg:sticky top-8">
             <PostWidget categories={id} />
-            <Categories />
+            {/* <Categories /> */}
           </div>
         </div>
       </div>

@@ -11,8 +11,8 @@ export default function Home({ posts }) {
     <div className="hidden lg:grid pt-6 overflow-y-scroll h-[80vh]">
       <FeaturedPosts />
     </div>
-    <div className="grid lg:grid-cols-[3fr_1fr] lg:gap-6 ">
-      <div className="">
+    <div className="grid lg:grid-cols-[3fr_1fr] lg:gap-6  ">
+      <div className="max-w-[61rem]">
         {data?.data.map((post, index) => (
           <PostCard key={index} post={post} />
         ))}
@@ -20,7 +20,7 @@ export default function Home({ posts }) {
       <div className="">
         <div className="relative lg:sticky top-8">
           <PostWidget />
-          <Categories />
+          {/* <Categories /> */}
         </div>
       </div>
     </div>

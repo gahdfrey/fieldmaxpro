@@ -3,7 +3,7 @@ import React from "react";
 import {
   FaYoutube,
   FaInstagram,
-  FaTwitter,
+  FaLinkedinIn,
   FaFacebookF
 } from "react-icons/fa";
 
@@ -11,7 +11,7 @@ import {
 function Footer() {
   return (
     <div className="max-w-[1170px]  mx-auto px-2 pt-[120px] pb-4 flex flex-col sm:flex-col justify-center items-center">
-      <div className="grid md:grid-cols-4 gap-8">
+      <div className="grid gap-8 md:grid-cols-4">
         <div>
           <h3 className="text-[24px] font-roboto mb-6 text-black font-medium leading-[50px]">
             About
@@ -24,40 +24,40 @@ function Footer() {
             </p>
           </div>
 
-          <div className="flex items-center gap-2 mt-4 w-full">
+          <div className="flex items-center w-full gap-2 mt-4">
             <a
-              href="https://www.linkedin.com/in/clint-briley-50056920a/"
+             href="https://bit.ly/32hCWTR"
               target="_blank"
               rel="noreferrer"
             >
-              <div className="rounded-full shadow-lg shadow-gray-100 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+              <div className="p-3 duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-100 hover:scale-105">
                 <FaFacebookF className="text-[#666666]"/>
               </div>
             </a>
             <a
-              href="https://github.com/fireclint"
+              href="https://instagram.com/fieldmaxpro.ng?igshid=YWJhMjlhZTc="
               target="_blank"
               rel="noreferrer"
             >
-              <div className="rounded-full shadow-lg shadow-gray-100 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+              <div className="p-3 duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-100 hover:scale-105">
                 <FaInstagram className="text-[#666666]"/>
               </div>
             </a>
             <a
-              href="https://www.linkedin.com/in/clint-briley-50056920a/"
+               href="https://bit.ly/3gfUAjm"
               target="_blank"
               rel="noreferrer"
             >
-              <div className="rounded-full shadow-lg shadow-gray-100 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                <FaTwitter className="text-[#666666]"/>
+              <div className="p-3 duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-100 hover:scale-105">
+              <FaLinkedinIn  className="text-[#666666]"/>
               </div>
             </a>
             <a
-              href="https://github.com/fireclint"
+               href="https://www.youtube.com/channel/UCiUwB1lHj9awlb0dq4O_Jhg"
               target="_blank"
               rel="noreferrer"
             >
-              <div className="rounded-full shadow-lg shadow-gray-100 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+              <div className="p-3 duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-100 hover:scale-105">
                 <FaYoutube className="text-[#666666]"/>
               </div>
             </a>
