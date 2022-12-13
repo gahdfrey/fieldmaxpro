@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const career = () => {
+const Career = () => {
   const [active, setActive] = useState(0);
 
   const handleClick = (value) => {
@@ -23,7 +23,7 @@ const career = () => {
               marketing manager
             </h2>
             <p className="py-[12.8px] text-[19.2px] font-lato">
-              We’re looking for a flexible and versatile marketer who will be
+              We&rsquo;re looking for a flexible and versatile marketer who will be
               responsible for the growth of our brand and services.
             </p>
             <p className="py-[12.8px] text-[19.2px] font-lato">
@@ -89,7 +89,7 @@ const career = () => {
                   campaigns accordingly
                 </li>
                 <li className="py-[12.8px]">
-                  Developing strategies and tactics to boost the company’s Brand
+                  Developing strategies and tactics to boost the company&rsquo;s Brand
                   and drive qualified traffic from multiple channels
                 </li>
                 <li className="py-[12.8px]">
@@ -161,7 +161,7 @@ const career = () => {
             </h2>
 
             <p className="py-[12.8px] text-[19.2px] font-latol">
-              We’re looking to hire a talented iOS developer to design,build,
+              We&rsquo;re looking to hire a talented iOS developer to design,build,
               and maintain the next generation of iOS applications. Your primary
               focus will be developing iOS application for the latest Apple
               mobile devices.
@@ -235,7 +235,7 @@ const career = () => {
                   back-end services
                 </li>
                 <li className="py-[12.8px]">
-                  Understanding of Apple’s design principles, architecture
+                  Understanding of Apple&rsquo;s design principles, architecture
                   patterns and interface guidelines
                 </li>
                 <li className="py-[12.8px]">
@@ -287,7 +287,7 @@ const career = () => {
             <p className="py-[12.8px] text-[19.2px] font-lato">
               Our marketing division is seeking a young, motivated person to
               join our team as a Digital Market Executive. You will be in charge
-              of the upkeep for our company's social media networks, writing
+              of the upkeep for our company`&rsquo;s social media networks, writing
               interesting content for all social platforms as well as daily user
               engagement tracking and feedback analysis.
             </p>
@@ -313,7 +313,7 @@ const career = () => {
               <ul className="list-disc text-[19.2px] font-lato">
                 <li className="py-[12.8px]">
                   Promoting products, services and content over social media, in
-                  a way that is consistent with an organization’s brand and
+                  a way that is consistent with an organization&rsquo;s brand and
                   social media strategy.
                 </li>
                 <li className="py-[12.8px]">
@@ -325,7 +325,7 @@ const career = () => {
                   Scheduling copies and posts for release at optimal times.
                 </li>
                 <li className="py-[12.8px]">
-                  Monitoring users' engagement with and feedback on every post.
+                  Monitoring users`&rsquo; engagement with and feedback on every post.
                 </li>
                 <li className="py-[12.8px]">
                   Analyzing and reporting on the effects of publications.
@@ -410,7 +410,7 @@ const career = () => {
             </h2>
 
             <p className="py-[12.8px] text-[19.2px] font-lato">
-              We’re seeking an experienced quality assurance specialist who can
+              We&rsquo;re seeking an experienced quality assurance specialist who can
               build upon this good reputation with an unwavering commitment to
               meticulous production.
             </p>
@@ -520,7 +520,7 @@ const career = () => {
   );
 };
 
-export default career;
+export default Career;
 
 // const Accordion = ({ headertext, children}) => {
 //   const [active,setActive] = useState(false);

@@ -15,7 +15,7 @@ function Value() {
             src={ValueImg}
             alt="/"
             layout="fill"
-            className="w-full object-contain "
+            className="object-contain w-full "
           />
         </div>
         {/* <div className="relative w-full ">
@@ -30,11 +30,11 @@ function Value() {
 
         <div className="md:ml-[97.5px] px-[15px]">
           <h2 className="text-[48px] font-bold mb-[30px] mt-12 leading-[60px] font-roboto">
-            Let's help you get more value from your fieldforce
+            Let&rsquo;s help you get more value from your fieldforce
           </h2>
           <p className="text-[16px] font-roboto text-[#666666] leading-7 mb-4 ">
             FieldMaxPro is designed to work with various business verticals, be
-            it Telecoms, Pharmaceuticals, FMCG's, Foods and Beverages, etc. Our
+            it Telecoms, Pharmaceuticals, FMCG&rsquo;s, Foods and Beverages, etc. Our
             FieldMaxPro Solution allows your sales team to become more efficient
             and increase productivity.
           </p>
