@@ -55,7 +55,7 @@ const Navbar = () => {
         }
       >
         <div className="flex justify-between items-center  px-2  max-w-[1170px] m-auto h-full">
-        <div className="relative w-[16rem]">
+        <div className="relative w-[10rem] lg:w-[16rem]">
                   <Image src={NavLogo} alt="/"  layout="responsive"
                 className="object-contain" />
                   {/* width={300} height={40} */}
@@ -162,9 +162,13 @@ const Navbar = () => {
           >
             <div>
               <div className="flex items-center justify-between w-full">
-                <Link href="/">
+              <div className="relative w-[10rem] mr-8">
+                  <Image src={NavLogo} alt="/"  layout="responsive"
+                className="object-contain" />
+                </div>
+                {/* <Link href="/">
                   <Image src={NavLogo} width="200" height="30" alt="/" />
-                </Link>
+                </Link> */}
                 <div
                   onClick={handleNav}
                   className="p-3 rounded-full shadow-lg cursor-pointer shadow-gray-400"
@@ -179,35 +183,40 @@ const Navbar = () => {
                 </p>
               </div>
             </div>
-            <div className="flex flex-col py-4">
+            <div className="flex flex-col py-2">
               <ul className="uppercase">
                 <Link href="/">
-                  <li onClick={() => setNav(false)} className="py-4 text-sm">
+                  <li onClick={() => setNav(false)} className="py-2 text-sm">
                     Home
                   </li>
                 </Link>
                 <Link href="/overview">
-                  <li onClick={() => setNav(false)} className="py-4 text-sm">
+                  <li onClick={() => setNav(false)} className="py-2 text-sm">
                     Overview
                   </li>
                 </Link>
-                <Link href="/solutins">
-                  <li onClick={() => setNav(false)} className="py-4 text-sm">
+                <Link href="/solutions">
+                  <li onClick={() => setNav(false)} className="py-2 text-sm">
                     Solutions
                   </li>
                 </Link>
                 <Link href="/pricing">
-                  <li onClick={() => setNav(false)} className="py-4 text-sm">
+                  <li onClick={() => setNav(false)} className="py-2 text-sm">
                     Pricing
                   </li>
                 </Link>
                 <Link href="/career">
-                  <li onClick={() => setNav(false)} className="py-4 text-sm">
+                  <li onClick={() => setNav(false)} className="py-2 text-sm">
                     Career
                   </li>
                 </Link>
+                <Link href="/blog">
+                  <li onClick={() => setNav(false)} className="py-2 text-sm">
+                    Blog
+                  </li>
+                </Link>
                 <Link href="/contact">
-                  <li onClick={() => setNav(false)} className="py-4 text-sm">
+                  <li onClick={() => setNav(false)} className="py-2 text-sm">
                     Contact
                   </li>
                 </Link>

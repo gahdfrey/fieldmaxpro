@@ -26,7 +26,7 @@ const PostWidget = ({ slug }) => {
           height="70px"
           width="70px"
           className="align-middle drop-shadow-lg rounded-full"
-          src={post.thumb_banner_url || '/assets/image_unavailable.jpeg'}
+          src={`https://dev.fieldmaxpro.com/upload/blog/${post?.thumb_banner_url}`}
         /> 
         </div>
           </div>

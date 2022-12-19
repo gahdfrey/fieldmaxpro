@@ -6,7 +6,7 @@ const PostDetail = ({ post }) => {
     <div className="pb-12 mb-8 bg-white rounded-lg shadow-lg lg:p-8">
       <div className="relative mb-6 shadow-md over-flow-hidden">
         <img
-          src={post?.thumb_banner_url}
+          src={`https://dev.fieldmaxpro.com/upload/blog/${post?.thumb_banner_url}`}
           alt={post?.title}
           className="object-top w-full h-full rounded-t-lg"
         />
