@@ -1,14 +1,17 @@
 import React from "react";
 import moment from "moment";
 
+
 const PostDetail = ({ post }) => {
   return (
     <div className="pb-12 mb-8 bg-white rounded-lg shadow-lg lg:p-8">
-      <div className="relative mb-6 shadow-md over-flow-hidden">
+       
+      <div className="mb-6">
         <img
           src={`https://dev.fieldmaxpro.com/upload/blog/${post?.thumb_banner_url}`}
           alt={post?.title}
-          className="object-top w-full h-full rounded-t-lg"
+          height="10"
+          className="object-cov w-full"
         />
       </div>
       <div className="px-4 lg:px-0 ">
